@@ -95,6 +95,28 @@ return array(
 		'render' => 'file:./render.php',
 		'viewScript' => 'file:./view.js'
 	),
+	'interactive-block' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'wp-multi-block-starter/singular-interactive-block',
+		'version' => '0.1.0',
+		'title' => 'Interactive: Dynamic Block',
+		'category' => 'text',
+		'icon' => 'wordpress',
+		'description' => 'Example of an interactive block loaded as a stand alone block.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'textdomain' => 'wp-multi-block-starter',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php',
+		'viewScriptModule' => 'file:./view.js'
+	),
 	'static-block' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
