@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wp-multi-block-starter/compiled-dynamic-block-two",
+  "version": "0.1.0",
+  "title": "Compiled: Dynamic Block Two",
+  "category": "text",
+  "icon": "wordpress",
+  "description": "Example of a dynamic block loaded via a single compiled asset in the block editor.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "wp-multi-block-starter",
+  "render": "file:./render.php"
+}

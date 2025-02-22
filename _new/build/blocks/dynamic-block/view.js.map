@@ -1,1 +1,0 @@
-{"version":3,"file":"blocks/dynamic-block/view.js","mappings":";;;;AAAAA,OAAO,CAACC,GAAG,CAAE,sDAAuD,CAAC,C","sources":["webpack://wp-multi-block/./src/blocks/dynamic-block/view.js"],"sourcesContent":["console.log( 'Hello World! (from create-block-dynamic-block block)' );\n"],"names":["console","log"],"sourceRoot":""}

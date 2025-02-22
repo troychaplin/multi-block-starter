@@ -1,0 +1,20 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wp-multi-block-starter/singular-dynamic-block",
+	"version": "0.1.0",
+	"title": "Singular: Dynamic Block",
+	"category": "text",
+	"icon": "wordpress",
+	"description": "Example of a dynamic block loaded as a stand alone block.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "wp-multi-block-starter",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

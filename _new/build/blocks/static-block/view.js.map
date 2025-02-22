@@ -1,1 +1,0 @@
-{"version":3,"file":"blocks/static-block/view.js","mappings":";;;;AAAAA,OAAO,CAACC,GAAG,CAAE,qDAAsD,CAAC,C","sources":["webpack://wp-multi-block/./src/blocks/static-block/view.js"],"sourcesContent":["console.log( 'Hello World! (from create-block-static-block block)' );\n"],"names":["console","log"],"sourceRoot":""}

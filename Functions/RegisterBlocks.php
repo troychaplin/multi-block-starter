@@ -35,21 +35,27 @@ class RegisterBlocks {
 	 * @return void
 	 */
 	public function register_blocks() {
-		$blocks_dir    = PluginPaths::plugin_path() . 'build/blocks/';
-		$block_folders = glob( $blocks_dir . '*', GLOB_ONLYDIR );
+		$blocks_dirs = array(
+			PluginPaths::plugin_path() . 'build/blocks/singular/',
+			PluginPaths::plugin_path() . 'build/blocks/compiled/',
+		);
 
-		if ( function_exists( 'wp_register_block_metadata_collection' ) ) {
-			wp_register_block_metadata_collection(
-				$blocks_dir,
-				PluginPaths::plugin_path() . 'build/blocks-manifest.php'
-			);
-		}
+		foreach ( $blocks_dirs as $blocks_dir ) {
+			$block_folders = glob( $blocks_dir . '*', GLOB_ONLYDIR );
 
-		foreach ( $block_folders as $block_path ) {
-			$block_json = $block_path . '/block.json';
+			if ( function_exists( 'wp_register_block_metadata_collection' ) ) {
+				wp_register_block_metadata_collection(
+					$blocks_dir,
+					PluginPaths::plugin_path() . 'build/blocks-manifest.php'
+				);
+			}
 
-			if ( file_exists( $block_json ) ) {
-				register_block_type( $block_path );
+			foreach ( $block_folders as $block_path ) {
+				$block_json = $block_path . '/block.json';
+
+				if ( file_exists( $block_json ) ) {
+					register_block_type( $block_path );
+				}
 			}
 		}
 	}
