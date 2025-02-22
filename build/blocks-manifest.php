@@ -1,7 +1,7 @@
 <?php
 // This file is generated. Do not modify it manually.
 return array(
-	'compiled-dynamic-block-one' => array(
+	'dynamic-block-one' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
 		'name' => 'wp-multi-block-starter/compiled-dynamic-block-one',
@@ -19,7 +19,7 @@ return array(
 		'textdomain' => 'wp-multi-block-starter',
 		'render' => 'file:./render.php'
 	),
-	'compiled-dynamic-block-two' => array(
+	'dynamic-block-two' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
 		'name' => 'wp-multi-block-starter/compiled-dynamic-block-two',
@@ -37,7 +37,7 @@ return array(
 		'textdomain' => 'wp-multi-block-starter',
 		'render' => 'file:./render.php'
 	),
-	'compiled-static-block-one' => array(
+	'static-block-one' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
 		'name' => 'wp-multi-block-starter/compiled-static-block-one',
@@ -55,7 +55,7 @@ return array(
 		'textdomain' => 'wp-multi-block-starter',
 		'render' => 'file:./render.php'
 	),
-	'compiled-static-block-two' => array(
+	'static-block-two' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
 		'name' => 'wp-multi-block-starter/compiled-static-block-two',
@@ -73,7 +73,7 @@ return array(
 		'textdomain' => 'wp-multi-block-starter',
 		'render' => 'file:./render.php'
 	),
-	'singular-dynamic-block' => array(
+	'dynamic-block' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
 		'name' => 'wp-multi-block-starter/singular-dynamic-block',
@@ -95,7 +95,7 @@ return array(
 		'render' => 'file:./render.php',
 		'viewScript' => 'file:./view.js'
 	),
-	'singular-static-block' => array(
+	'static-block' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
 		'name' => 'wp-multi-block-starter/singular-static-block',
