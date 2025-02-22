@@ -1,1 +1,0 @@
-{"version":3,"file":"blocks/static-block/index.css","mappings":";;;AAAA;EACC;AACD,C","sources":["webpack://wp-multi-block/./src/blocks/static-block/editor.scss"],"sourcesContent":[".wp-block-create-block-static-block {\n\tborder: 1px dotted #f00;\n}\n"],"names":[],"sourceRoot":""}
