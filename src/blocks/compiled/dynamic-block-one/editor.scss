@@ -1,5 +1,5 @@
-@import "./style.scss";
+@use './style.scss';
 
 .wp-block-example-block-four.is-selected {
-    border: 2px dotted #f00;
+	border: 2px dotted #f00;
 }
