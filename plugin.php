@@ -17,59 +17,55 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-/**
- * Registers the blocks using block.json files
- */
-function multiblock_register_blocks() {
-	$custom_blocks = array(
-		'block-one',
-		'block-two',
-		'block-three',
-		'block-four',
-	);
+// Include Composer's autoload file.
+require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
 
-	foreach ( $custom_blocks as $block ) {
-		register_block_type( __DIR__ . '/build/blocks/' . $block );
-	}
+// Instantiate the classes.
+$multi_block_classes = array(
+	\MultiBlock\PluginPaths::class,
+	\MultiBlock\RegisterBlocks::class,
+);
+
+foreach ( $multi_block_classes as $multi_block_class ) {
+	new $multi_block_class();
 }
-add_action( 'init', 'multiblock_register_blocks' );
 
-/**
- * Enqueues the block assets for the editor
- */
-function multiblock_enqueue_block_assets() {
-	wp_enqueue_script(
-		'multi-block-editor-js',
-		plugin_dir_url( __FILE__ ) . 'build/multi-block-editor.js',
-		array( 'wp-blocks', 'wp-components', 'wp-data', 'wp-dom-ready', 'wp-edit-post', 'wp-element', 'wp-i18n', 'wp-plugins' ),
-		null,
-		false
-	);
+// /**
+// * Enqueues the block assets for the editor
+// */
+// function multiblock_enqueue_block_assets() {
+// wp_enqueue_script(
+// 'multi-block-editor-js',
+// plugin_dir_url( __FILE__ ) . 'build/multi-block-editor.js',
+// array( 'wp-blocks', 'wp-components', 'wp-data', 'wp-dom-ready', 'wp-edit-post', 'wp-element', 'wp-i18n', 'wp-plugins' ),
+// null,
+// false
+// );
 
-	wp_enqueue_style(
-		'multi-block-editor-css',
-		plugin_dir_url( __FILE__ ) . 'build/multi-block-editor.css',
-		array(),
-		null
-	);
-}
-add_action( 'enqueue_block_editor_assets', 'multiblock_enqueue_block_assets' );
+// wp_enqueue_style(
+// 'multi-block-editor-css',
+// plugin_dir_url( __FILE__ ) . 'build/multi-block-editor.css',
+// array(),
+// null
+// );
+// }
+// add_action( 'enqueue_block_editor_assets', 'multiblock_enqueue_block_assets' );
 
-/**
- * Enqueues the block assets for the frontend
- */
-function multiblock_enqueue_frontend_assets() {
-	wp_enqueue_style(
-		'multi-block-frontend-css',
-		plugin_dir_url( __FILE__ ) . 'build/style-multi-block-editor.css',
-	);
+// /**
+// * Enqueues the block assets for the frontend
+// */
+// function multiblock_enqueue_frontend_assets() {
+// wp_enqueue_style(
+// 'multi-block-frontend-css',
+// plugin_dir_url( __FILE__ ) . 'build/style-multi-block-editor.css',
+// );
 
-	wp_enqueue_script(
-		'multi-block-frontend-js',
-		plugin_dir_url( __FILE__ ) . 'build/multi-block-frontend.js',
-		array(),
-		null,
-		true
-	);
-}
-add_action( 'wp_enqueue_scripts', 'multiblock_enqueue_frontend_assets' );
+// wp_enqueue_script(
+// 'multi-block-frontend-js',
+// plugin_dir_url( __FILE__ ) . 'build/multi-block-frontend.js',
+// array(),
+// null,
+// true
+// );
+// }
+// add_action( 'wp_enqueue_scripts', 'multiblock_enqueue_frontend_assets' );
