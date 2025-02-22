@@ -4,6 +4,7 @@ const path = require('path');
 module.exports = {
 	...defaultConfig,
 	entry: {
+		...defaultConfig.entry(),
 		'multi-block-editor': [
 			path.resolve(__dirname, 'src/multi-block-editor.js'),
 		],

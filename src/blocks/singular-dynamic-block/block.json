@@ -1,17 +1,17 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "create-block/dynamic-block",
+	"name": "wp-multi-block-starter/singular-dynamic-block",
 	"version": "0.1.0",
-	"title": "Dynamic Block",
-	"category": "widgets",
-	"icon": "smiley",
-	"description": "Example block scaffolded with Create Block tool.",
+	"title": "Singular: Dynamic Block",
+	"category": "text",
+	"icon": "wordpress",
+	"description": "Example of a dynamic block loaded as a stand alone block.",
 	"example": {},
 	"supports": {
 		"html": false
 	},
-	"textdomain": "wp-multi-block",
+	"textdomain": "wp-multi-block-starter",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",

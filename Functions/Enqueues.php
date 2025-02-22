@@ -32,7 +32,7 @@ class Enqueues {
 	public function multiblock_enqueue_block_assets() {
 		wp_enqueue_script(
 			'multi-block-editor-js',
-			PluginPaths::plugin_path() . 'build/multi-block-editor.js',
+			PluginPaths::plugin_url() . 'build/multi-block-editor.js',
 			array( 'wp-blocks', 'wp-components', 'wp-data', 'wp-dom-ready', 'wp-edit-post', 'wp-element', 'wp-i18n', 'wp-plugins' ),
 			'0.1.0',
 			false
@@ -40,7 +40,7 @@ class Enqueues {
 
 		wp_enqueue_style(
 			'multi-block-editor-css',
-			PluginPaths::plugin_path() . 'build/multi-block-editor.css',
+			PluginPaths::plugin_url() . 'build/multi-block-editor.css',
 			array(),
 			'0.1.0'
 		);
@@ -53,7 +53,7 @@ class Enqueues {
 	public function multiblock_enqueue_frontend_assets() {
 		wp_enqueue_script(
 			'multi-block-frontend-js',
-			PluginPaths::plugin_path() . 'build/multi-block-frontend.js',
+			PluginPaths::plugin_url() . 'build/multi-block-frontend.js',
 			array(),
 			'0.1.0',
 			true
@@ -61,7 +61,7 @@ class Enqueues {
 
 		wp_enqueue_style(
 			'multi-block-frontend-css',
-			PluginPaths::plugin_path() . 'build/style-multi-block-editor.css',
+			PluginPaths::plugin_url() . 'build/style-multi-block-editor.css',
 			array(),
 			'0.1.0'
 		);
