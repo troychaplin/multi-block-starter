@@ -4,8 +4,8 @@ import './editor.scss';
 
 export default function Edit() {
 	return (
-		<p { ...useBlockProps() }>
-			{ __( 'Block One – hello from the editor!', 'block-one' ) }
+		<p {...useBlockProps()}>
+			{__('Block One – hello from the editor!', 'block-one')}
 		</p>
 	);
 }

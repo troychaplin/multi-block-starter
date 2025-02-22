@@ -1,1 +1,1 @@
-console.log("frontend test");
+console.log('frontend test');
