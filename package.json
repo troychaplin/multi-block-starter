@@ -20,11 +20,15 @@
 		"postbuild": "npm run build-blocks-manifest",
 		"start:all": "concurrently \"npm run start\" \"npm run start:interactive\""
 	},
+	"files": [
+		"[^.]*"
+	],
 	"devDependencies": {
 		"@commitlint/cli": "^19.6.1",
 		"@commitlint/config-conventional": "^19.6.0",
 		"@wordpress/blocks": "^13.8.0",
 		"@wordpress/dom-ready": "^4.8.0",
+		"@wordpress/interactivity": "^6.18.0",
 		"@wordpress/scripts": "^30.0.2",
 		"husky": "^9.1.7",
 		"webpack": "^5.95.0",
