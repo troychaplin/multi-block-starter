@@ -11,41 +11,34 @@ Before you begin, ensure you have the following installed:
 -   Composer
 -   Git
 
-## Initial Setup
+## Getting Setup
 
-1. Clone the repository:
+Add instructions.
 
-    ```
-    git clone https://github.com/troychaplin/image-multi-block.git
-    cd image-multi-block
-    ```
-
-2. Install Node dependencies:
-    ```
-    npm install
-    ```
+```
+git clone https://github.com/troychaplin/wp-multi-block-starter.git
+cd wp-multi-block-starter
+npm install
+```
 
 ## Local WordPress Environment
 
 This project uses @wordpress/env for local development:
 
-1. Start the WordPress environment:
+-   `npm run wp-env start` - Start the local environment
+-   `npm run wp-env stop` - Stop the local environment
+-   Site: http://localhost:8888
+-   Admin: http://localhost:8888/wp-admin
+-   Login: admin
+-   Password: password
 
-    ```
-    npm run wp-env start
-    ```
+### Troubleshooting
 
-2. Access WordPress:
+If wp-env issues occur try the following:
 
-    - Site: http://localhost:8888
-    - Admin: http://localhost:8888/wp-admin
-    - Login: admin
-    - Password: password
-
-3. Stop the environment:
-    ```
-    npm run wp-env stop
-    ```
+-   `npm run wp-env stop`
+-   `npm run wp-env clean`
+-   `npm run wp-env start`
 
 ## Development Commands
 
@@ -69,28 +62,7 @@ Required VS Code extensions:
 -   ESLint
 -   Prettier
 
-## Build Commands
-
-1. Create production build:
-
-    ```
-    npm run build
-    ```
-
-2. Run a watch task:
-    ```
-    npm run start
-    ```
-
-## Troubleshooting
-
-If wp-env issues occur:
-
-```
-npm run wp-env stop
-npm run wp-env clean
-npm run wp-env start
-```
+### Troubleshooting
 
 For PHP_CodeSniffer issues:
 
