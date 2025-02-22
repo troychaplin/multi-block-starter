@@ -54,6 +54,13 @@ class RegisterBlocks {
 				$block_json = $block_path . '/block.json';
 
 				if ( file_exists( $block_json ) ) {
+					$metadata = json_decode( file_get_contents( $block_json ), true );
+					
+					// Special handling for interactive blocks
+					if ( isset( $metadata['viewScriptModule'] ) ) {
+						add_filter( 'should_load_separate_core_block_assets', '__return_true' );
+					}
+					
 					register_block_type( $block_path );
 				}
 			}
