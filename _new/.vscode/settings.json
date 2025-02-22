@@ -1,0 +1,25 @@
+{
+	"[php]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "obliviousharmony.vscode-php-codesniffer"
+	},
+
+	"phpCodeSniffer.standard": "Custom",
+	"phpCodeSniffer.standardCustom": "WordPress",
+	"phpCodeSniffer.exec.osx": "vendor/bin/phpcs",
+	"phpCodeSniffer.exec.linux": "vendor/bin/phpcs",
+
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[javascript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+		"editor.formatOnSave": true,
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": "explicit"
+		}
+	},
+	"eslint.enable": true,
+	"eslint.format.enable": true,
+	"javascript.format.enable": false,
+	"prettier.enable": false
+}

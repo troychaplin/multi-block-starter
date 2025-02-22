@@ -1,0 +1,1 @@
+{"version":3,"file":"blocks/dynamic-block/index.css","mappings":";;;AAAA;EACC;AACD,C","sources":["webpack://wp-multi-block/./src/blocks/dynamic-block/editor.scss"],"sourcesContent":[".wp-block-create-block-dynamic-block {\n\tborder: 1px dotted #f00;\n}\n"],"names":[],"sourceRoot":""}
