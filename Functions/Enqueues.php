@@ -17,7 +17,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class Enqueues {
 
-
 	/**
 	 * Constructor for the class.
 	 */
@@ -30,7 +29,7 @@ class Enqueues {
 	 * Enqueues the block assets for the editor
 	 */
 	public function multiblock_enqueue_block_assets() {
-		$asset_file = include( PluginPaths::plugin_path() . 'build/multi-block-editor.asset.php' );
+		$asset_file = include PluginPaths::plugin_path() . 'build/multi-block-editor.asset.php';
 
 		wp_enqueue_script(
 			'multi-block-editor-js',
@@ -45,7 +44,7 @@ class Enqueues {
 	 * Enqueues the block assets for the frontend
 	 */
 	public function multiblock_enqueue_frontend_assets() {
-		$asset_file = include( PluginPaths::plugin_path() . 'build/multi-block-frontend.asset.php' );
+		$asset_file = include PluginPaths::plugin_path() . 'build/multi-block-frontend.asset.php';
 
 		wp_enqueue_script(
 			'multi-block-frontend-js',

@@ -21,6 +21,10 @@ class PluginPaths {
 	 * @return string The URL to the plugin directory.
 	 */
 	public static function plugin_url() {
+		// Ensure the constant is defined before using it.
+		if ( ! defined( 'MULTI_BLOCK_URL' ) ) {
+			return '';
+		}
 		return MULTI_BLOCK_URL;
 	}
 
@@ -30,6 +34,10 @@ class PluginPaths {
 	 * @return string The path to the plugin directory.
 	 */
 	public static function plugin_path() {
+		// Ensure the constant is defined before using it.
+		if ( ! defined( 'MULTI_BLOCK_PATH' ) ) {
+			return '';
+		}
 		return MULTI_BLOCK_PATH;
 	}
 }

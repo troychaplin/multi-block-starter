@@ -17,7 +17,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class RegisterBlocks {
 
-
 	/**
 	 * Constructor for the class.
 	 */
