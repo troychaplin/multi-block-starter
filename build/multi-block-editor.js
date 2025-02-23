@@ -1,1 +1,109 @@
-(()=>{"use strict";var e,o={865:()=>{const e=window.wp.blocks,o=window.wp.i18n,r=window.wp.blockEditor,t=window.ReactJSXRuntime,l=JSON.parse('{"UU":"wp-multi-block-starter/compiled-static-block-one"}');(0,e.registerBlockType)(l.UU,{edit:function(){return(0,t.jsx)("p",{...(0,r.useBlockProps)(),children:(0,o.__)("Block One – hello from the editor!","block-one")})},save:function(){return(0,t.jsx)("p",{...r.useBlockProps.save(),children:"Block One – hello from the saved content!"})}});const c=JSON.parse('{"UU":"wp-multi-block-starter/compiled-static-block-two"}');(0,e.registerBlockType)(c.UU,{edit:function(){return(0,t.jsx)("p",{...(0,r.useBlockProps)(),children:(0,o.__)("Block Two – hello from the editor!","block-two")})},save:function(){return(0,t.jsx)("p",{...r.useBlockProps.save(),children:"Block Two – hello from the saved content!"})}});const n=JSON.parse('{"UU":"wp-multi-block-starter/compiled-dynamic-block-two"}');(0,e.registerBlockType)(n.UU,{edit:function(){return(0,t.jsx)("p",{...(0,r.useBlockProps)(),children:(0,o.__)("Block Three – hello from the editor!","block-three")})}});const i=JSON.parse('{"UU":"wp-multi-block-starter/compiled-dynamic-block-one"}');(0,e.registerBlockType)(i.UU,{edit:function(){return(0,t.jsx)("p",{...(0,r.useBlockProps)(),children:(0,o.__)("Block Four – hello from the editor!","block-four")})}})}},r={};function t(e){var l=r[e];if(void 0!==l)return l.exports;var c=r[e]={exports:{}};return o[e](c,c.exports,t),c.exports}t.m=o,e=[],t.O=(o,r,l,c)=>{if(!r){var n=1/0;for(a=0;a<e.length;a++){for(var[r,l,c]=e[a],i=!0,s=0;s<r.length;s++)(!1&c||n>=c)&&Object.keys(t.O).every((e=>t.O[e](r[s])))?r.splice(s--,1):(i=!1,c<n&&(n=c));if(i){e.splice(a--,1);var p=l();void 0!==p&&(o=p)}}return o}c=c||0;for(var a=e.length;a>0&&e[a-1][2]>c;a--)e[a]=e[a-1];e[a]=[r,l,c]},t.o=(e,o)=>Object.prototype.hasOwnProperty.call(e,o),(()=>{var e={48:0,897:0};t.O.j=o=>0===e[o];var o=(o,r)=>{var l,c,[n,i,s]=r,p=0;if(n.some((o=>0!==e[o]))){for(l in i)t.o(i,l)&&(t.m[l]=i[l]);if(s)var a=s(t)}for(o&&o(r);p<n.length;p++)c=n[p],t.o(e,c)&&e[c]&&e[c][0](),e[c]=0;return t.O(a)},r=globalThis.webpackChunkwp_multi_block_starter=globalThis.webpackChunkwp_multi_block_starter||[];r.forEach(o.bind(null,0)),r.push=o.bind(null,r.push.bind(r))})();var l=t.O(void 0,[897],(()=>t(865)));l=t.O(l)})();
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/helpers/block-styles.js":
+/*!*************************************!*\
+  !*** ./src/helpers/block-styles.js ***!
+  \*************************************/
+/***/ (() => {
+
+// import { unregisterBlockStyle } from '@wordpress/blocks';
+// import domReady from '@wordpress/dom-ready';
+
+// domReady(() => {
+// 	unregisterBlockStyle('core/button', ['outline']);
+// });
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry needs to be wrapped in an IIFE because it needs to be in strict mode.
+(() => {
+"use strict";
+/*!***********************************!*\
+  !*** ./src/multi-block-editor.js ***!
+  \***********************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _helpers_block_styles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers/block-styles */ "./src/helpers/block-styles.js");
+/* harmony import */ var _helpers_block_styles__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_helpers_block_styles__WEBPACK_IMPORTED_MODULE_0__);
+/**
+ * Block Editor Script Functionality
+ *
+ * The following scripts are compiled into a single asset and loaded into the block editor.
+ *
+ */
+
+
+})();
+
+/******/ })()
+;
+//# sourceMappingURL=multi-block-editor.js.map

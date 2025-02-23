@@ -1,0 +1,1 @@
+{"version":3,"file":"blocks/static/hero-banner/style-index.css","mappings":";;;AAAA;EACC;EACA;EACA;AACD,C","sources":["webpack://wp-multi-block-starter/./src/blocks/static/hero-banner/style.scss"],"sourcesContent":[".wp-block-wp-multi-block-starter-hero-banner {\n\tbackground-color: rgb(59, 2, 105);\n\tcolor: #fff;\n\tpadding: 5px 8px;\n}\n"],"names":[],"sourceRoot":""}
