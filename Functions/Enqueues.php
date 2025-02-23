@@ -37,15 +37,7 @@ class Enqueues {
 			'0.1.0',
 			false
 		);
-
-		wp_enqueue_style(
-			'multi-block-editor-css',
-			PluginPaths::plugin_url() . 'build/multi-block-editor.css',
-			array(),
-			'0.1.0'
-		);
 	}
-
 
 	/**
 	 * Enqueues the block assets for the frontend
@@ -57,13 +49,6 @@ class Enqueues {
 			array(),
 			'0.1.0',
 			true
-		);
-
-		wp_enqueue_style(
-			'multi-block-frontend-css',
-			PluginPaths::plugin_url() . 'build/style-multi-block-editor.css',
-			array(),
-			'0.1.0'
 		);
 	}
 }
