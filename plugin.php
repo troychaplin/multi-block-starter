@@ -17,6 +17,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+// Define plugin constants.
+define( 'MULTI_BLOCK_PATH', plugin_dir_path( __FILE__ ) );
+define( 'MULTI_BLOCK_URL', plugin_dir_url( __FILE__ ) );
+
 // Include Composer's autoload file.
 require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
 
