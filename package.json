@@ -6,8 +6,7 @@
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"scripts": {
-		"start:blocks": "wp-scripts start --webpack-copy-php",
-		"start:interactive": "wp-scripts start --experimental-modules --webpack-copy-php",
+		"start": "wp-scripts start --experimental-modules --webpack-copy-php",
 		"build": "rm -rf build && npm run build:blocks && npm run build:interactive && npm run build-blocks-manifest",
 		"build:blocks": "wp-scripts build --webpack-copy-php --config webpack.build.js",
 		"build:interactive": "wp-scripts build --experimental-modules --webpack-copy-php",
