@@ -1,18 +1,1 @@
-/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/interactive/interactive-block/editor.scss ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************/
-/**
- * The following styles get applied inside the editor only.
- *
- * Replace them with your own styles or remove the file completely.
- */
-.wp-block-wp-multi-block-starter-interactive-block {
-  border: 1px dotted #ffffff;
-}
-
-.wp-block-wp-multi-block-starter-interactive-block input[type=text] {
-  font-size: 1em;
-  color: inherit;
-  background: inherit;
-  border: 0;
-}
+.wp-block-wp-multi-block-starter-interactive-block{border:1px dotted #fff}.wp-block-wp-multi-block-starter-interactive-block input[type=text]{background:inherit;border:0;color:inherit;font-size:1em}

@@ -1,1 +1,0 @@
-{"version":3,"file":"blocks/dynamic/random-quote/style-index.css","mappings":";;;AAAA;EACC;EACA;EACA;AACD,C","sources":["webpack://wp-multi-block-starter/./src/blocks/dynamic/random-quote/style.scss"],"sourcesContent":[".wp-block-wp-multi-block-starter-random-quote {\n\tbackground-color: rgb(0, 61, 166);\n\tcolor: #fff;\n\tpadding: 5px 8px;\n}\n"],"names":[],"sourceRoot":""}

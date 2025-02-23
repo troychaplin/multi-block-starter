@@ -30,11 +30,13 @@ class Enqueues {
 	 * Enqueues the block assets for the editor
 	 */
 	public function multiblock_enqueue_block_assets() {
+		$asset_file = include( PluginPaths::plugin_path() . 'build/multi-block-editor.asset.php' );
+
 		wp_enqueue_script(
 			'multi-block-editor-js',
 			PluginPaths::plugin_url() . 'build/multi-block-editor.js',
-			array( 'wp-blocks', 'wp-components', 'wp-data', 'wp-dom-ready', 'wp-edit-post', 'wp-element', 'wp-i18n', 'wp-plugins' ),
-			'0.1.0',
+			$asset_file['dependencies'],
+			$asset_file['version'],
 			false
 		);
 	}
@@ -43,11 +45,13 @@ class Enqueues {
 	 * Enqueues the block assets for the frontend
 	 */
 	public function multiblock_enqueue_frontend_assets() {
+		$asset_file = include( PluginPaths::plugin_path() . 'build/multi-block-frontend.asset.php' );
+
 		wp_enqueue_script(
 			'multi-block-frontend-js',
 			PluginPaths::plugin_url() . 'build/multi-block-frontend.js',
-			array(),
-			'0.1.0',
+			$asset_file['dependencies'],
+			$asset_file['version'],
 			true
 		);
 	}

@@ -1,1 +1,0 @@
-{"version":3,"file":"blocks/static/custom-embed/style-index.css","mappings":";;;AAAA;EACC;EACA;EACA;AACD,C","sources":["webpack://wp-multi-block-starter/./src/blocks/static/custom-embed/style.scss"],"sourcesContent":[".wp-block-wp-multi-block-starter-custom-embed {\n\tbackground-color: rgb(23, 78, 0);\n\tcolor: #fff;\n\tpadding: 5px 8px;\n}\n"],"names":[],"sourceRoot":""}
