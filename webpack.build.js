@@ -1,10 +1,10 @@
-const defaultConfig = require('@wordpress/scripts/config/webpack.config');
+// const defaultConfig = require('@wordpress/scripts/config/webpack.config');
 const path = require('path');
 
 module.exports = {
-	...defaultConfig,
+	// ...defaultConfig,
 	entry: {
-		...defaultConfig.entry(),
+		// ...defaultConfig.entry(),
 		'multi-block-editor': [
 			path.resolve(__dirname, 'src/multi-block-editor.js'),
 		],
