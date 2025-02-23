@@ -48,6 +48,7 @@ class RegisterBlocks {
 				wp_register_block_metadata_collection(
 					$blocks_dir,
 					PluginPaths::plugin_path() . 'build/blocks-manifest.php'
+					// PluginPaths::plugin_path() . 'src/blocks-manifest.php'
 				);
 			}
 

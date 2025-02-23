@@ -16,7 +16,7 @@
 		"start:blocks": "wp-scripts start --webpack-copy-php",
 		"build:interactive": "wp-scripts build --experimental-modules",
 		"start:interactive": "wp-scripts start --experimental-modules",
-		"build-blocks-manifest": "wp-scripts build-blocks-manifest",
+		"build-blocks-manifest": "wp-scripts build-blocks-manifest --output=src/blocks-manifest.php",
 		"postbuild": "npm run build-blocks-manifest"
 	},
 	"files": [
