@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wp-multi-block-starter/news-feed",
+  "version": "0.1.0",
+  "title": "News Feed (Dynamic Example)",
+  "category": "text",
+  "icon": "wordpress",
+  "description": "Example of a dynamic block loaded via a single compiled asset in the block editor.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "wp-multi-block-starter",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

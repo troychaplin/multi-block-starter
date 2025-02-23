@@ -36,8 +36,9 @@ class RegisterBlocks {
 	 */
 	public function register_blocks() {
 		$blocks_dirs = array(
-			PluginPaths::plugin_path() . 'build/blocks/singular/',
-			PluginPaths::plugin_path() . 'build/blocks/compiled/',
+			PluginPaths::plugin_path() . 'build/blocks/dynamic/',
+			PluginPaths::plugin_path() . 'build/blocks/interactive/',
+			PluginPaths::plugin_path() . 'build/blocks/static/',
 		);
 
 		foreach ( $blocks_dirs as $blocks_dir ) {
@@ -55,12 +56,12 @@ class RegisterBlocks {
 
 				if ( file_exists( $block_json ) ) {
 					$metadata = json_decode( file_get_contents( $block_json ), true );
-					
-					// Special handling for interactive blocks
+
+					// Special handling for interactive blocks.
 					if ( isset( $metadata['viewScriptModule'] ) ) {
 						add_filter( 'should_load_separate_core_block_assets', '__return_true' );
 					}
-					
+
 					register_block_type( $block_path );
 				}
 			}

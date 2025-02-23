@@ -1,87 +1,15 @@
 <?php
 // This file is generated. Do not modify it manually.
 return array(
-	'dynamic-block-one' => array(
+	'news-feed' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'wp-multi-block-starter/compiled-dynamic-block-one',
+		'name' => 'wp-multi-block-starter/news-feed',
 		'version' => '0.1.0',
-		'title' => 'Compiled: Dynamic Block One',
+		'title' => 'News Feed (Dynamic Example)',
 		'category' => 'text',
 		'icon' => 'wordpress',
 		'description' => 'Example of a dynamic block loaded via a single compiled asset in the block editor.',
-		'example' => array(
-			
-		),
-		'supports' => array(
-			'html' => false
-		),
-		'textdomain' => 'wp-multi-block-starter',
-		'render' => 'file:./render.php'
-	),
-	'dynamic-block-two' => array(
-		'$schema' => 'https://schemas.wp.org/trunk/block.json',
-		'apiVersion' => 3,
-		'name' => 'wp-multi-block-starter/compiled-dynamic-block-two',
-		'version' => '0.1.0',
-		'title' => 'Compiled: Dynamic Block Two',
-		'category' => 'text',
-		'icon' => 'wordpress',
-		'description' => 'Example of a dynamic block loaded via a single compiled asset in the block editor.',
-		'example' => array(
-			
-		),
-		'supports' => array(
-			'html' => false
-		),
-		'textdomain' => 'wp-multi-block-starter',
-		'render' => 'file:./render.php'
-	),
-	'static-block-one' => array(
-		'$schema' => 'https://schemas.wp.org/trunk/block.json',
-		'apiVersion' => 3,
-		'name' => 'wp-multi-block-starter/compiled-static-block-one',
-		'version' => '0.1.0',
-		'title' => 'Compiled: Static Block One',
-		'category' => 'text',
-		'icon' => 'wordpress',
-		'description' => 'Example of a static block loaded via a single compiled asset in the block editor.',
-		'example' => array(
-			
-		),
-		'supports' => array(
-			'html' => false
-		),
-		'textdomain' => 'wp-multi-block-starter',
-		'render' => 'file:./render.php'
-	),
-	'static-block-two' => array(
-		'$schema' => 'https://schemas.wp.org/trunk/block.json',
-		'apiVersion' => 3,
-		'name' => 'wp-multi-block-starter/compiled-static-block-two',
-		'version' => '0.1.0',
-		'title' => 'Compiled: Static Block Two',
-		'category' => 'text',
-		'icon' => 'wordpress',
-		'description' => 'Example of a static block loaded via a single compiled asset in the block editor.',
-		'example' => array(
-			
-		),
-		'supports' => array(
-			'html' => false
-		),
-		'textdomain' => 'wp-multi-block-starter',
-		'render' => 'file:./render.php'
-	),
-	'dynamic-block' => array(
-		'$schema' => 'https://schemas.wp.org/trunk/block.json',
-		'apiVersion' => 3,
-		'name' => 'wp-multi-block-starter/singular-dynamic-block',
-		'version' => '0.1.0',
-		'title' => 'Singular: Dynamic Block',
-		'category' => 'text',
-		'icon' => 'wordpress',
-		'description' => 'Example of a dynamic block loaded as a stand alone block.',
 		'example' => array(
 			
 		),
@@ -92,18 +20,38 @@ return array(
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
-		'render' => 'file:./render.php',
-		'viewScript' => 'file:./view.js'
+		'render' => 'file:./render.php'
+	),
+	'random-quote' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'wp-multi-block-starter/random-quote',
+		'version' => '0.1.0',
+		'title' => 'Random Quote (Dynamic Example)',
+		'category' => 'text',
+		'icon' => 'wordpress',
+		'description' => 'Example of a dynamic block loaded via a single compiled asset in the block editor.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'textdomain' => 'wp-multi-block-starter',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
 	),
 	'interactive-block' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'wp-multi-block-starter/singular-interactive-block',
+		'name' => 'wp-multi-block-starter/interactive-block',
 		'version' => '0.1.0',
-		'title' => 'Interactive: Dynamic Block',
+		'title' => 'Interactive Block',
 		'category' => 'text',
 		'icon' => 'wordpress',
-		'description' => 'Example of an interactive block loaded as a stand alone block.',
+		'description' => 'Example of an interactive block.',
 		'example' => array(
 			
 		),
@@ -117,15 +65,37 @@ return array(
 		'render' => 'file:./render.php',
 		'viewScriptModule' => 'file:./view.js'
 	),
-	'static-block' => array(
+	'custom-embed' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'wp-multi-block-starter/singular-static-block',
+		'name' => 'wp-multi-block-starter/custom-embed',
 		'version' => '0.1.0',
-		'title' => 'Singular: Static Block',
+		'title' => 'Custom Embed (Static Example)',
 		'category' => 'text',
 		'icon' => 'wordpress',
-		'description' => 'Example of a static block loaded as a stand alone block.',
+		'description' => 'Example of a static block loaded via a single compiled asset in the block editor.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'textdomain' => 'wp-multi-block-starter',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php',
+		'viewScript' => 'file:./view.js'
+	),
+	'hero-banner' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'wp-multi-block-starter/hero-banner',
+		'version' => '0.1.0',
+		'title' => 'Hero Banner (Static Example)',
+		'category' => 'text',
+		'icon' => 'wordpress',
+		'description' => 'Example of a static block loaded via a single compiled asset in the block editor.',
 		'example' => array(
 			
 		),
