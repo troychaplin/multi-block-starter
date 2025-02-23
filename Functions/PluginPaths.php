@@ -21,8 +21,7 @@ class PluginPaths {
 	 * @return string The URL to the plugin directory.
 	 */
 	public static function plugin_url() {
-		$plugin_assets = WP_PLUGIN_URL . '/wp-multi-block-starter/';
-		return $plugin_assets;
+		return MULTI_BLOCK_URL;
 	}
 
 	/**
@@ -31,7 +30,6 @@ class PluginPaths {
 	 * @return string The path to the plugin directory.
 	 */
 	public static function plugin_path() {
-		$plugin_assets = WP_PLUGIN_DIR . '/wp-multi-block-starter/';
-		return $plugin_assets;
+		return MULTI_BLOCK_PATH;
 	}
 }
