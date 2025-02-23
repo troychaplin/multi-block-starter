@@ -14,8 +14,8 @@
 		"plugin-zip": "wp-scripts plugin-zip",
 		"build:blocks": "wp-scripts build --webpack-copy-php --config webpack.build.js",
 		"start:blocks": "wp-scripts start --webpack-copy-php",
-		"build:interactive": "wp-scripts build --experimental-modules",
-		"start:interactive": "wp-scripts start --experimental-modules",
+		"build:interactive": "wp-scripts build --experimental-modules --webpack-copy-php",
+		"start:interactive": "wp-scripts start --experimental-modules --webpack-copy-php",
 		"build-blocks-manifest": "wp-scripts build-blocks-manifest --output=src/blocks-manifest.php",
 		"postbuild": "npm run build-blocks-manifest"
 	},

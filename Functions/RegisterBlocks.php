@@ -47,8 +47,7 @@ class RegisterBlocks {
 			if ( function_exists( 'wp_register_block_metadata_collection' ) ) {
 				wp_register_block_metadata_collection(
 					$blocks_dir,
-					PluginPaths::plugin_path() . 'build/blocks-manifest.php'
-					// PluginPaths::plugin_path() . 'src/blocks-manifest.php'
+					PluginPaths::plugin_path() . 'src/blocks-manifest.php'
 				);
 			}
 
