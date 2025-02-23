@@ -1,4 +1,4 @@
-# WordPress Multi Block Plugin
+# Multi Block Starter Plugin
 
 Coming soon...
 
@@ -7,13 +7,13 @@ Coming soon...
 Before you begin, ensure you have the following installed:
 
 -   Node.js (v16 or higher)
--   Docker
+-   Docker (if you intend to use `wp-en`)
 -   Composer
 -   Git
 
 ## Getting Setup
 
-Add instructions.
+This plugin can be cloned into the plugins folder of an existing local WordPress installation, or cloned to any other location if you intend to use `wp-env` for local development.
 
 ```
 git clone https://github.com/troychaplin/wp-multi-block-starter.git
@@ -23,14 +23,17 @@ npm install
 
 ## Local WordPress Environment
 
-This project uses @wordpress/env for local development:
+This project includes [@wordpress/env](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/) as an optional local development environment. You can run the following to start and stop the Docker container:
 
--   `npm run wp-env start` - Start the local environment
--   `npm run wp-env stop` - Stop the local environment
+-   `npm run wp-env start`
+-   `npm run wp-env stop`
+
+### Local Site Info
+
 -   Site: http://localhost:8888
 -   Admin: http://localhost:8888/wp-admin
--   Login: admin
--   Password: password
+-   Login: `admin`
+-   Password: `password`
 
 ### Troubleshooting
 
@@ -48,7 +51,7 @@ If wp-env issues occur try the following:
 -   `npm run lint:css` - Lint CSS files
 -   `npm run format` - Format code using WordPress standards
 
-## Code Standards
+## Coding Standards
 
 This project follows WordPress coding standards using:
 
@@ -77,8 +80,9 @@ wp-multi-block-starter/
 ├── build/                  # Compiled files
 ├── src/                    # Source files
 │   └── blocks/             # Block components
-│       └── compiled/       # Compiled blocks
-│       └── singular/       # Single self-contained blocks
+│       └── dynamic/        # Dynamic blocks
+│       └── interactive/    # Interactive blocks
+│       └── static/         # Static blocks
 ├── Functions/              # PHP classes
 ├── vendor/                 # Composer dependencies
 ├── node_modules/           # Node dependencies
