@@ -73,16 +73,18 @@ composer dump-autoload
 ## Project Structure
 
 ```
-wp-multi-block/
-├── build/               # Compiled files
-├── src/                 # Source files
-│   └── blocks/          # Block components
-├── Functions/           # PHP classes
-├── vendor/              # Composer dependencies
-├── node_modules/        # Node dependencies
-├── .eslintrc.json       # ESLint configuration
-├── .wp-env.json         # WordPress environment config
-├── composer.json        # PHP dependencies
-├── package.json         # Node dependencies
-└── README.md            # This file
+wp-multi-block-starter/
+├── build/                  # Compiled files
+├── src/                    # Source files
+│   └── blocks/             # Block components
+│       └── compiled/       # Compiled blocks
+│       └── singular/       # Single self-contained blocks
+├── Functions/              # PHP classes
+├── vendor/                 # Composer dependencies
+├── node_modules/           # Node dependencies
+├── .eslintrc.json          # ESLint configuration
+├── .wp-env.json            # WordPress environment config
+├── composer.json           # PHP dependencies
+├── package.json            # Node dependencies
+└── README.md               # This file
 ```
