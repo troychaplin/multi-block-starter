@@ -35,6 +35,13 @@ class RegisterBlocks {
 	 * @return void
 	 */
 	public function register_blocks() {
+		global $wp_filesystem;
+
+		if ( empty( $wp_filesystem ) ) {
+			require_once ABSPATH . 'wp-admin/includes/file.php';
+			WP_Filesystem();
+		}
+
 		$blocks_dirs = array(
 			PluginPaths::plugin_path() . 'build/blocks/dynamic/',
 			PluginPaths::plugin_path() . 'build/blocks/interactive/',
@@ -54,8 +61,18 @@ class RegisterBlocks {
 			foreach ( $block_folders as $block_path ) {
 				$block_json = $block_path . '/block.json';
 
-				if ( file_exists( $block_json ) ) {
-					$metadata = json_decode( file_get_contents( $block_json ), true );
+				if ( $wp_filesystem->exists( $block_json ) ) {
+					$block_json_content = $wp_filesystem->get_contents( $block_json );
+
+					if ( false === $block_json_content ) {
+						continue;
+					}
+
+					$metadata = json_decode( $block_json_content, true );
+
+					if ( json_last_error() !== JSON_ERROR_NONE ) {
+						continue;
+					}
 
 					// Special handling for interactive blocks.
 					if ( isset( $metadata['viewScriptModule'] ) ) {
