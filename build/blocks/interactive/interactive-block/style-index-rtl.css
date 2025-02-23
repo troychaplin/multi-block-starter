@@ -1,1 +1,26 @@
-.wp-block-wp-multi-block-starter-interactive-block{background:rgba(255,255,0,.102);font-size:1em;padding:1em}.wp-block-wp-multi-block-starter-interactive-block.dark-theme{background:#333;color:#fff}.wp-block-wp-multi-block-starter-interactive-block.dark-theme button{background:#555;border:1px solid #777;color:#fff}.wp-block-wp-multi-block-starter-interactive-block.dark-theme p{color:#ddd}
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/interactive/interactive-block/style.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-wp-multi-block-starter-interactive-block {
+  font-size: 1em;
+  background: rgba(255, 255, 0, 0.1019607843);
+  padding: 1em;
+}
+.wp-block-wp-multi-block-starter-interactive-block.dark-theme {
+  background: #333;
+  color: #fff;
+}
+.wp-block-wp-multi-block-starter-interactive-block.dark-theme button {
+  background: #555;
+  color: #fff;
+  border: 1px solid #777;
+}
+.wp-block-wp-multi-block-starter-interactive-block.dark-theme p {
+  color: #ddd;
+}

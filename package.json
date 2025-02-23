@@ -6,9 +6,11 @@
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"scripts": {
-		"start": "wp-scripts start --experimental-modules --webpack-copy-php",
+		"start": "concurrently \"npm run start:blocks\" \"npm run start:scripts\"",
+		"start:blocks": "wp-scripts start --experimental-modules --webpack-copy-php",
+		"start:scripts": "webpack --config webpack.scripts.js --watch",
 		"build": "rm -rf build && npm run build:blocks && npm run build:interactive && npm run build-blocks-manifest",
-		"build:blocks": "wp-scripts build --webpack-copy-php --config webpack.build.js",
+		"build:blocks": "wp-scripts build --webpack-copy-php --config webpack.scripts.js",
 		"build:interactive": "wp-scripts build --experimental-modules --webpack-copy-php",
 		"build-blocks-manifest": "wp-scripts build-blocks-manifest --output=src/blocks-manifest.php",
 		"postbuild": "npm run build-blocks-manifest",
