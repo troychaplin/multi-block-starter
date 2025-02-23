@@ -1,10 +1,33 @@
 # Multi Block Starter Plugin
 
-This plugin serves as a foundational template for WordPress block development, uniquely combining different block types (dynamic, static, and interactive) into a single, efficient plugin structure. Here's a detailed breakdown:
+Supercharge your WordPress block development with this modern, production-ready starter plugin. Built for developers who need a robust foundation for creating multiple block types, this plugin combines the power of static, dynamic, and interactive blocks in one efficient setup. Say goodbye to juggling multiple plugins and hello to a streamlined development workflow with optimized asset loading, modern build tools, and best practices baked in.
 
-## Block Architecture
+This plugin serves as a foundational template for WordPress block development, uniquely combining different block types (dynamic, static, and interactive) into a single, efficient plugin structure.
 
-### Unified Block Management
+## Table of Contents
+
+-   [Core Features & Architecture](#core-features--architecture)
+    -   [Block Architecture](#block-architecture)
+        -   [Unified Block Management](#unified-block-management)
+        -   [Efficient Asset Loading](#efficient-asset-loading)
+    -   [Build System](#build-system)
+        -   [Asset Management](#asset-management)
+    -   [Technical Implementation](#technical-implementation)
+    -   [Development Environment](#development-environment)
+-   [Prerequisites](#prerequisites)
+-   [Getting Setup](#getting-setup)
+-   [Local WordPress Environment](#local-wordpress-environment)
+    -   [Local Site Info](#local-site-info)
+    -   [Troubleshooting](#troubleshooting)
+-   [Development Commands](#development-commands)
+-   [Coding Standards](#coding-standards)
+-   [Project Structure](#project-structure)
+
+## Core Features & Architecture
+
+### Block Architecture
+
+#### Unified Block Management
 
 The plugin provides a structured approach to managing multiple block types:
 
@@ -12,7 +35,7 @@ The plugin provides a structured approach to managing multiple block types:
 -   Dynamic Blocks: Server-side rendered blocks using PHP for dynamic content
 -   Interactive Blocks: Client-side interactive blocks with JavaScript functionality
 
-### Efficient Asset Loading
+#### Efficient Asset Loading
 
 Each block operates as an independent unit, similar to single-block plugins, with:
 
@@ -20,9 +43,9 @@ Each block operates as an independent unit, similar to single-block plugins, wit
 -   Separate frontend and editor bundles to optimize performance
 -   Smart asset versioning through WordPress's build process (the asset.php files automatically track dependencies and versions based on content changes)
 
-## Build System
+### Build System
 
-### Asset Management
+#### Asset Management
 
 The plugin uses WordPress's modern build system with some notable features:
 
@@ -37,7 +60,7 @@ The build process supports loading an additional script into the block editor fo
 -   Custom block categories
 -   Other block related functionality
 
-## Technical Implementation
+### Technical Implementation
 
 The plugin demonstrates modern WordPress development practices:
 
@@ -46,7 +69,7 @@ The plugin demonstrates modern WordPress development practices:
 -   WordPress coding standards compliance
 -   Development tooling for code quality (ESLint, PHP_CodeSniffer, Prettier)
 
-## Development Environment
+### Development Environment
 
 The plugin includes a complete development environment with:
 
@@ -57,7 +80,7 @@ The plugin includes a complete development environment with:
 
 This structure provides a robust foundation for building complex block-based solutions while maintaining clean code organization and optimal performance.
 
----------
+---
 
 ## Prerequisites
 
