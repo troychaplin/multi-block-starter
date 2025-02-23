@@ -1,6 +1,63 @@
 # Multi Block Starter Plugin
 
-Coming soon...
+This plugin serves as a foundational template for WordPress block development, uniquely combining different block types (dynamic, static, and interactive) into a single, efficient plugin structure. Here's a detailed breakdown:
+
+## Block Architecture
+
+### Unified Block Management
+
+The plugin provides a structured approach to managing multiple block types:
+
+-   Static Blocks: Traditional Gutenberg blocks rendered entirely in JavaScript
+-   Dynamic Blocks: Server-side rendered blocks using PHP for dynamic content
+-   Interactive Blocks: Client-side interactive blocks with JavaScript functionality
+
+### Efficient Asset Loading
+
+Each block operates as an independent unit, similar to single-block plugins, with:
+
+-   Isolated asset loading - scripts and styles load only when blocks are used
+-   Separate frontend and editor bundles to optimize performance
+-   Smart asset versioning through WordPress's build process (the asset.php files automatically track dependencies and versions based on content changes)
+
+## Build System
+
+### Asset Management
+
+The plugin uses WordPress's modern build system with some notable features:
+
+-   Automatic version hashing through `.asset.php` files
+-   The version numbers in `Enqueues.php` are dynamically generated during build, preventing cache issues and ensuring users always get the latest block versions
+-   Dependencies are automatically tracked and included in the build process
+
+The build process supports loading an additional script into the block editor for:
+
+-   Block variations and modifications
+-   Custom style variations
+-   Custom block categories
+-   Other block related functionality
+
+## Technical Implementation
+
+The plugin demonstrates modern WordPress development practices:
+
+-   Proper namespacing and class structure
+-   Clean separation of concerns between editor and frontend code
+-   WordPress coding standards compliance
+-   Development tooling for code quality (ESLint, PHP_CodeSniffer, Prettier)
+
+## Development Environment
+
+The plugin includes a complete development environment with:
+
+-   Docker-based local WordPress setup through `wp-env`
+-   Hot reloading for development
+-   Automated build processes for production
+-   Comprehensive linting and formatting tools
+
+This structure provides a robust foundation for building complex block-based solutions while maintaining clean code organization and optimal performance.
+
+---------
 
 ## Prerequisites
 
@@ -16,8 +73,9 @@ Before you begin, ensure you have the following installed:
 This plugin can be cloned into the plugins folder of an existing local WordPress installation, or cloned to any other location if you intend to use `wp-env` for local development.
 
 ```
-git clone https://github.com/troychaplin/wp-multi-block-starter.git
-cd wp-multi-block-starter
+git clone https://github.com/troychaplin/multi-block-starter.git
+cd multi-block-starter
+nvm install
 npm install
 ```
 
