@@ -28,14 +28,12 @@
 		"@commitlint/config-conventional": "^19.6.0",
 		"@wordpress/blocks": "^13.8.0",
 		"@wordpress/dom-ready": "^4.8.0",
+		"@wordpress/env": "^10.8.0",
 		"@wordpress/interactivity": "^6.18.0",
 		"@wordpress/scripts": "^30.0.2",
 		"husky": "^9.1.7",
 		"webpack": "^5.95.0",
 		"webpack-cli": "^5.1.4",
 		"concurrently": "^8.0.0"
-	},
-	"dependencies": {
-		"@wordpress/env": "^10.8.0"
 	}
 }
