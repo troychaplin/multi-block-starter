@@ -87,7 +87,7 @@ This structure provides a robust foundation for building complex block-based sol
 Before you begin, ensure you have the following installed:
 
 -   Node.js (v16 or higher)
--   Docker (if you intend to use `wp-en`)
+-   Docker (if you intend to use `wp-env`)
 -   Composer
 -   Git
 
