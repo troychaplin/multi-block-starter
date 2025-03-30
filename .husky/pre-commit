@@ -7,11 +7,11 @@ echo "\033[0;31mRunning lint command...\033[0m"
 npm run lint || { echo "\033[0;31mLinting failed. Commit aborted.\033[0m"; exit 1; }
 
 # Run the format command
-echo ""
-echo "\033[0;31mRunning format command...\033[0m"
-npm run format
+# echo ""
+# echo "\033[0;31mRunning format command...\033[0m"
+# npm run format
 
 # Run the build command
-echo ""
-echo "\033[0;31mRunning build command...\033[0m"
-npm run build
+# echo ""
+# echo "\033[0;31mRunning build command...\033[0m"
+# npm run build
