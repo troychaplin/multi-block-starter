@@ -3,7 +3,7 @@
         'name' => 'troychaplin/multi-block-starter',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '7a4aeae1f9d9ccb8815ccbbfff61dddcfbd93269',
+        'reference' => '1ca20ff047a419e7884ab7b12227457249ec7634',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -49,7 +49,7 @@
         'troychaplin/multi-block-starter' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '7a4aeae1f9d9ccb8815ccbbfff61dddcfbd93269',
+            'reference' => '1ca20ff047a419e7884ab7b12227457249ec7634',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

@@ -3,8 +3,8 @@ set -e
 
 # Run the lint command
 echo ""
-echo "\033[0;31mRunning lint:js command...\033[0m"
-npm run lint
+echo "\033[0;31mRunning lint command...\033[0m"
+npm run lint || { echo "\033[0;31mLinting failed. Commit aborted.\033[0m"; exit 1; }
 
 # Run the format command
 echo ""

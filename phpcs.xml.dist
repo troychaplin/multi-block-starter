@@ -8,26 +8,23 @@
     <exclude-pattern>/node_modules/</exclude-pattern>
     <exclude-pattern>/vendor/</exclude-pattern>
 	<exclude-pattern>src/blocks-manifest.php</exclude-pattern>
-	<exclude-pattern>src/blocks/examples/</exclude-pattern>
 
     <!-- How to scan -->
     <arg value="sp"/>
     <arg name="basepath" value="."/>
     <arg name="colors"/>
     <arg name="extensions" value="php"/>
-    <arg name="parallel" value="8"/>
+    <arg name="parallel" value="4"/>
 
     <!-- Rules: WordPress Coding Standards -->
     <config name="minimum_supported_wp_version" value="6.6"/>
     <config name="text_domain" value="multi-block-starter"/>
     
-    <rule ref="WordPress">
-        <exclude name="WordPress.Files.FileName"/>
-    </rule>
+    <rule ref="WordPress" />
 
     <rule ref="WordPress-Core">
+        <!-- Allow short array syntax for modern PHP -->
 		<exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
-		<exclude name="WordPress.Files.FileName" />
 	</rule>
 	
     <rule ref="WordPress-Docs"/>
@@ -52,9 +49,5 @@
                 <element value="multi-block-starter"/>
             </property>
         </properties>
-    </rule>
-    
-	<rule ref="Generic.Commenting">
-        <exclude name="Generic.Commenting.DocComment.MissingShort" />
     </rule>
 </ruleset> 
