@@ -1,18 +1,11 @@
 const defaultConfig = require('@wordpress/scripts/config/webpack.config');
 const path = require('path');
-
 module.exports = {
 	...defaultConfig,
 	entry: {
 		...defaultConfig.entry,
-		'multi-block-editor': path.resolve(
-			__dirname,
-			'src/multi-block-editor.js'
-		),
-		'multi-block-frontend': path.resolve(
-			__dirname,
-			'src/multi-block-frontend.js'
-		),
+		'multi-block-editor': path.resolve(__dirname, 'src/multi-block-editor.js'),
+		'multi-block-frontend': path.resolve(__dirname, 'src/multi-block-frontend.js'),
 	},
 	output: {
 		...defaultConfig.output,
