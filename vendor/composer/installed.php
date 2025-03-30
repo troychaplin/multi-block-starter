@@ -1,24 +1,15 @@
 <?php return array(
     'root' => array(
-        'name' => '__root__',
+        'name' => 'troychaplin/multi-block-starter',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '8fe11d2d9d5b05e8c986f48d63aa127c60bd74dc',
-        'type' => 'library',
+        'reference' => '7a4aeae1f9d9ccb8815ccbbfff61dddcfbd93269',
+        'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
-        '__root__' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => '8fe11d2d9d5b05e8c986f48d63aa127c60bd74dc',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../../',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
         'dealerdirect/phpcodesniffer-composer-installer' => array(
             'pretty_version' => 'v1.0.0',
             'version' => '1.0.0.0',
@@ -47,13 +38,22 @@
             'dev_requirement' => true,
         ),
         'squizlabs/php_codesniffer' => array(
-            'pretty_version' => '3.11.3',
-            'version' => '3.11.3.0',
-            'reference' => 'ba05f990e79cbe69b9f35c8c1ac8dca7eecc3a10',
+            'pretty_version' => '3.12.0',
+            'version' => '3.12.0.0',
+            'reference' => '2d1b63db139c3c6ea0c927698e5160f8b3b8d630',
             'type' => 'library',
             'install_path' => __DIR__ . '/../squizlabs/php_codesniffer',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'troychaplin/multi-block-starter' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '7a4aeae1f9d9ccb8815ccbbfff61dddcfbd93269',
+            'type' => 'wordpress-plugin',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'wp-coding-standards/wpcs' => array(
             'pretty_version' => '3.1.0',

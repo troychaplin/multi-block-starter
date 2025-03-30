@@ -5,10 +5,7 @@ import './editor.scss';
 export default function Edit() {
 	return (
 		<p {...useBlockProps()}>
-			{__(
-				'Hero Banner (static block) in the editor',
-				'wp-multi-block-starter'
-			)}
+			{__('Hero Banner (static block) in the editor', 'multi-block-starter')}
 		</p>
 	);
 }

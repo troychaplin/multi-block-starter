@@ -1,7 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "wp-multi-block-starter/hero-banner",
+	"name": "multi-block-starter/hero-banner",
 	"version": "0.1.0",
 	"title": "Hero Banner (Static Example)",
 	"category": "text",
@@ -11,7 +11,7 @@
 	"supports": {
 		"html": false
 	},
-	"textdomain": "wp-multi-block-starter",
+	"textdomain": "multi-block-starter",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",

@@ -21,7 +21,7 @@ const { state } = store('interactivity', {
 	callbacks: {
 		logIsOpen: () => {
 			const { isOpen } = getContext();
-			// Log the value of `isOpen` each time it changes.
+			// eslint-disable-next-line no-console
 			console.log(`Is open: ${isOpen}`);
 		},
 	},

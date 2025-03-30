@@ -9,7 +9,6 @@
 namespace PHP_CodeSniffer\Tests\Core\Generators;
 
 use PHP_CodeSniffer\Ruleset;
-use PHP_CodeSniffer\Runner;
 use PHP_CodeSniffer\Tests\ConfigDouble;
 use PHP_CodeSniffer\Tests\Core\Generators\Fixtures\MockGenerator;
 use PHPUnit\Framework\TestCase;
@@ -193,53 +192,36 @@ final class GeneratorTest extends TestCase
 
 
     /**
-     * Test that the documentation for each standard passed on the command-line is shown separately.
-     *
-     * @covers \PHP_CodeSniffer\Runner::runPHPCS
+     * Verify that if the `<documentation>` title is missing, it will fallback to the file name
+     * and split the CamelCaps name correctly.
      *
      * @return void
      */
-    public function testGeneratorWillShowEachStandardSeparately()
+    public function testGetTitleFallbackToFilename()
     {
-        if (PHP_CODESNIFFER_CBF === true) {
-            $this->markTestSkipped('This test needs CS mode to run');
-        }
+        // Set up the ruleset.
+        $standard = __DIR__.'/AllValidDocsTest.xml';
+        $sniffs   = 'StandardWithDocs.Content.DocumentationTitlePCREFallback';
+        $config   = new ConfigDouble(["--standard=$standard", "--sniffs=$sniffs"]);
+        $ruleset  = new Ruleset($config);
 
-        $standard        = __DIR__.'/OneDocTest.xml';
-        $_SERVER['argv'] = [
-            'phpcs',
-            '--generator=Text',
-            "--standard=$standard,PSR1",
-            '--report-width=80',
-        ];
+        // In tests, the `--sniffs` setting doesn't work out of the box.
+        $sniffParts = explode('.', $sniffs);
+        $sniffFile  = __DIR__.DIRECTORY_SEPARATOR.'Fixtures'.DIRECTORY_SEPARATOR.$sniffParts[0].DIRECTORY_SEPARATOR;
+        $sniffFile .= 'Sniffs'.DIRECTORY_SEPARATOR.$sniffParts[1].DIRECTORY_SEPARATOR.$sniffParts[2].'Sniff.php';
 
-        $regex = '`^
-            \R*                                                      # Optional blank line at the start.
-            (?:
-                (?P<delimiter>-+\R)                                  # Line with dashes.
-                \|[ ]GENERATORTEST[ ]CODING[ ]STANDARD:[ ][^\|]+\|\R # Doc title line with prefix expected for first standard.
-                (?P>delimiter)                                       # Line with dashes.
-                .+?\R{2}                                             # Standard description.
-            )                                                        # Only expect this group once.
-            (?:
-                (?P>delimiter)                                       # Line with dashes.
-                \|[ ]PSR1[ ]CODING[ ]STANDARD:[ ][^\|]+\|\R          # Doc title line with prefix expected for second standard.
-                (?P>delimiter)                                       # Line with dashes.
-                .+?\R+                                               # Standard description.
-                (?:
-                    -+[ ]CODE[ ]COMPARISON[ ]-+\R                    # Code Comparison starter line with dashes.
-                    (?:.+?(?P>delimiter)\R){2}                       # Arbitrary text followed by a delimiter line.
-                )*                                                   # Code comparison is optional and can exist multiple times.
-                \R+
-            ){3,}                                                    # This complete group should occur at least three times.
-            `sx';
+        $sniffParts   = array_map('strtolower', $sniffParts);
+        $sniffName    = $sniffParts[0].'\sniffs\\'.$sniffParts[1].'\\'.$sniffParts[2].'sniff';
+        $restrictions = [$sniffName => true];
+        $ruleset->registerSniffs([$sniffFile], $restrictions, []);
 
-        $this->expectOutputRegex($regex);
+        // Make the test OS independent.
+        $this->expectOutputString('Documentation Title PCRE Fallback'.PHP_EOL);
 
-        $runner = new Runner();
-        $runner->runPHPCS();
+        $generator = new MockGenerator($ruleset);
+        $generator->generate();
 
-    }//end testGeneratorWillShowEachStandardSeparately()
+    }//end testGetTitleFallbackToFilename()
 
 
 }//end class

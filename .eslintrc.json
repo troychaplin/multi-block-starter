@@ -1,23 +1,17 @@
-// filepath: /Users/troychaplin/Develop/idc.wordpress/wp-content/plugins/idc-block-plugin/.eslintrc.json
 {
-	"extends": ["plugin:@wordpress/eslint-plugin/recommended", "prettier"],
+	"extends": ["plugin:@wordpress/eslint-plugin/recommended"],
 	"env": {
 		"browser": true,
 		"es6": true,
-		"node": true
+		"jquery": true
 	},
 	"parserOptions": {
-		"ecmaVersion": 2020,
+		"requireConfigFile": false,
+		"ecmaVersion": 2021,
 		"sourceType": "module"
 	},
 	"rules": {
-		"prettier/prettier": [
-			"error",
-			{},
-			{
-				"usePrettierrc": true
-			}
-		]
-		// Add any custom rules here if needed
+		"@wordpress/no-global-active-element": "warn",
+		"@wordpress/no-unsafe-wp-apis": "warn"
 	}
 }

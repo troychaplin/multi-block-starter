@@ -4,7 +4,7 @@ return array(
 	'news-feed' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'wp-multi-block-starter/news-feed',
+		'name' => 'multi-block-starter/news-feed',
 		'version' => '0.1.0',
 		'title' => 'News Feed (Dynamic Example)',
 		'category' => 'text',
@@ -16,7 +16,7 @@ return array(
 		'supports' => array(
 			'html' => false
 		),
-		'textdomain' => 'wp-multi-block-starter',
+		'textdomain' => 'multi-block-starter',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
@@ -25,7 +25,7 @@ return array(
 	'random-quote' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'wp-multi-block-starter/random-quote',
+		'name' => 'multi-block-starter/random-quote',
 		'version' => '0.1.0',
 		'title' => 'Random Quote (Dynamic Example)',
 		'category' => 'text',
@@ -37,7 +37,7 @@ return array(
 		'supports' => array(
 			'html' => false
 		),
-		'textdomain' => 'wp-multi-block-starter',
+		'textdomain' => 'multi-block-starter',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
@@ -46,7 +46,7 @@ return array(
 	'interactive-block' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'wp-multi-block-starter/interactive-block',
+		'name' => 'multi-block-starter/interactive-block',
 		'version' => '0.1.0',
 		'title' => 'Interactive Block',
 		'category' => 'text',
@@ -58,7 +58,7 @@ return array(
 		'supports' => array(
 			'html' => false
 		),
-		'textdomain' => 'wp-multi-block-starter',
+		'textdomain' => 'multi-block-starter',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
@@ -68,7 +68,7 @@ return array(
 	'custom-embed' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'wp-multi-block-starter/custom-embed',
+		'name' => 'multi-block-starter/custom-embed',
 		'version' => '0.1.0',
 		'title' => 'Custom Embed (Static Example)',
 		'category' => 'text',
@@ -80,7 +80,7 @@ return array(
 		'supports' => array(
 			'html' => false
 		),
-		'textdomain' => 'wp-multi-block-starter',
+		'textdomain' => 'multi-block-starter',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
@@ -90,7 +90,7 @@ return array(
 	'hero-banner' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'wp-multi-block-starter/hero-banner',
+		'name' => 'multi-block-starter/hero-banner',
 		'version' => '0.1.0',
 		'title' => 'Hero Banner (Static Example)',
 		'category' => 'text',
@@ -102,7 +102,7 @@ return array(
 		'supports' => array(
 			'html' => false
 		),
-		'textdomain' => 'wp-multi-block-starter',
+		'textdomain' => 'multi-block-starter',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',

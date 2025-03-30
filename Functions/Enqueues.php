@@ -1,8 +1,8 @@
 <?php // phpcs:ignore Squiz.Commenting.FileComment.Missing
 
-namespace MultiBlock;
+namespace Multi_Block_Starter;
 
-use MultiBlock\PluginPaths;
+use Multi_Block_Starter\Plugin_Paths;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * This class is responsible for enqueueing scripts and styles for the plugin.
  *
- * @package MultiBlock
+ * @package Multi_Block_Starter
  */
 class Enqueues {
 
@@ -21,19 +21,19 @@ class Enqueues {
 	 * Constructor for the class.
 	 */
 	public function __construct() {
-		add_action( 'enqueue_block_editor_assets', array( $this, 'multiblock_enqueue_block_assets' ) );
-		add_action( 'wp_enqueue_scripts', array( $this, 'multiblock_enqueue_frontend_assets' ) );
+		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_block_assets' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_frontend_assets' ) );
 	}
 
 	/**
 	 * Enqueues the block assets for the editor
 	 */
-	public function multiblock_enqueue_block_assets() {
-		$asset_file = include PluginPaths::plugin_path() . 'build/multi-block-editor.asset.php';
+	public function enqueue_block_assets() {
+		$asset_file = include Plugin_Paths::plugin_path() . 'build/multi-block-editor.asset.php';
 
 		wp_enqueue_script(
 			'multi-block-editor-js',
-			PluginPaths::plugin_url() . 'build/multi-block-editor.js',
+			Plugin_Paths::plugin_url() . 'build/multi-block-editor.js',
 			$asset_file['dependencies'],
 			$asset_file['version'],
 			false
@@ -43,12 +43,12 @@ class Enqueues {
 	/**
 	 * Enqueues the block assets for the frontend
 	 */
-	public function multiblock_enqueue_frontend_assets() {
-		$asset_file = include PluginPaths::plugin_path() . 'build/multi-block-frontend.asset.php';
+	public function enqueue_frontend_assets() {
+		$asset_file = include Plugin_Paths::plugin_path() . 'build/multi-block-frontend.asset.php';
 
 		wp_enqueue_script(
 			'multi-block-frontend-js',
-			PluginPaths::plugin_url() . 'build/multi-block-frontend.js',
+			Plugin_Paths::plugin_url() . 'build/multi-block-frontend.js',
 			$asset_file['dependencies'],
 			$asset_file['version'],
 			true
