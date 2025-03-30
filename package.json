@@ -28,7 +28,6 @@
 		"build:blocks": "wp-scripts build --webpack-copy-php --config webpack.scripts.js",
 		"build:interactive": "wp-scripts build --experimental-modules --webpack-copy-php",
 		"build-blocks-manifest": "wp-scripts build-blocks-manifest --output=src/blocks-manifest.php",
-		"postbuild": "npm run build-blocks-manifest",
 		"format": "npm run format:js && npm run format:php && npm run format:css",
 		"format:php": "./vendor/bin/phpcbf --standard=phpcs.xml.dist -v",
 		"format:js": "wp-scripts lint-js --fix",

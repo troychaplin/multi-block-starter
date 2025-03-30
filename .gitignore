@@ -13,7 +13,9 @@ coverage
 build/Release
 
 # Dependency directories
+build/
 node_modules/
+vendor/
 
 # Optional npm cache directory
 .npm
