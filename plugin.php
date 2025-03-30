@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Define plugin constants.
 define( 'MULTI_BLOCK_STARTER_PATH', plugin_dir_path( __FILE__ ) );
-define( 'MULTI_BLOCK_STARTER_URL', plugin_dir_url( __FILE__ ) );
+define('MULTI_BLOCK_STARTER_URL', plugin_dir_url(__FILE__));
 
 // Include Composer's autoload file.
 require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
