@@ -39,7 +39,8 @@
 		"lint": "npm run lint:js && npm run lint:php && npm run lint:css",
 		"size": "size-limit",
 		"packages-update": "wp-scripts packages-update",
-		"plugin-zip": "wp-scripts plugin-zip"
+		"plugin-zip": "wp-scripts plugin-zip",
+		"prepare": "husky"
 	},
 	"files": [
 		"[^.]*"
