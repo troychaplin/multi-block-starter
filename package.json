@@ -39,7 +39,8 @@
 		"size": "size-limit",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
-		"prepare": "husky"
+		"prepare": "husky",
+		"wp-env": "wp-env"
 	},
 	"files": [
 		"[^.]*"
