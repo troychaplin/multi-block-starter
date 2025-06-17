@@ -16,3 +16,5 @@ Prefix the change with one of these keywords:
 - _Security_: in case of vulnerabilities.
 
 ## [Unreleased]
+
+- _Fixed_: Check for autoload.php before requiring it.
