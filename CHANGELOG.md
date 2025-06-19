@@ -19,3 +19,4 @@ Prefix the change with one of these keywords:
 
 -   _Fixed_: Check for autoload.php before requiring it.
 -   _Fixed_: Missing wp-env script and some documentation changes.
+-   _Removed_: Commitlint requirements
