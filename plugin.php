@@ -22,8 +22,12 @@ define( 'MULTI_BLOCK_STARTER_PATH', plugin_dir_path( __FILE__ ) );
 define( 'MULTI_BLOCK_STARTER_URL', plugin_dir_url( __FILE__ ) );
 
 // Include Composer's autoload file.
-require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
-
+if ( file_exists( plugin_dir_path( __FILE__ ) . 'vendor/autoload.php' ) ) {
+	require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
+} else {
+	wp_trigger_error( ' Multi Block Starter Plugin: Composer autoload file not found. Please run `composer install` to install the dependencies.', E_USER_ERROR );
+	return;
+}
 // Instantiate the classes.
 $multi_block_starter_classes = array(
 	\Multi_Block_Starter\Enqueues::class,
