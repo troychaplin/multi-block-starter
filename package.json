@@ -46,8 +46,6 @@
 		"[^.]*"
 	],
 	"devDependencies": {
-		"@commitlint/cli": "^19.8.0",
-		"@commitlint/config-conventional": "^19.8.0",
 		"@size-limit/preset-small-lib": "^11.2.0",
 		"@wordpress/blocks": "^14.10.0",
 		"@wordpress/data": "^10.21.0",
