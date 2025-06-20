@@ -25,6 +25,8 @@
     <rule ref="WordPress-Core">
         <!-- Allow short array syntax for modern PHP -->
 		<exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
+		<!-- Exclude call-time pass by reference warnings -->
+		<exclude name="Generic.Functions.CallTimePassByReference"/>
 	</rule>
 	
     <rule ref="WordPress-Docs"/>
