@@ -36,6 +36,8 @@
 		"lint:js": "wp-scripts lint-js --max-warnings=0",
 		"lint:php": "composer run lint",
 		"lint": "npm run lint:js && npm run lint:php && npm run lint:css",
+		"setup": "bash -c 'source ~/.nvm/nvm.sh && nvm install && npm install && composer install'",
+		"reset": "rm -rf node_modules && rm -rf build && rm -rf vendor && npm run setup",
 		"size": "size-limit",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
