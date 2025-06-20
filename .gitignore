@@ -17,6 +17,10 @@ build/
 node_modules/
 vendor/
 
+# Lock files
+package-lock.json
+composer.lock
+
 # Optional npm cache directory
 .npm
 
