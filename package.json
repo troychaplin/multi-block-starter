@@ -5,69 +5,30 @@
 	"author": "Troy Chaplin",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
-	"lint-staged": {
-		"*.{css,scss}": [
-			"stylelint --fix",
-			"git add"
-		],
-		"*.js": [
-			"wp-scripts format",
-			"wp-scripts lint-js",
-			"git add"
-		],
-		"*.php": [
-			"composer run format",
-			"git add"
-		]
-	},
 	"scripts": {
-		"start": "concurrently \"npm run start:blocks\" \"npm run start:scripts\"",
-		"start:blocks": "wp-scripts start --experimental-modules --webpack-copy-php",
-		"start:scripts": "webpack --config webpack.scripts.js --watch",
-		"build": "rm -rf build && npm run build:blocks && npm run build:interactive && npm run build-blocks-manifest && npm run size",
-		"build:blocks": "wp-scripts build --webpack-copy-php --config webpack.scripts.js",
-		"build:interactive": "wp-scripts build --experimental-modules --webpack-copy-php",
-		"build-blocks-manifest": "wp-scripts build-blocks-manifest --output=src/blocks-manifest.php",
-		"format": "npm run format:js && npm run format:php && npm run format:css",
-		"format:php": "./vendor/bin/phpcbf --standard=phpcs.xml.dist -v",
+		"build": "wp-scripts build --experimental-modules --blocks-manifest",
+		"lint": "npm-run-all lint:*",
+		"format": "npm-run-all format:*",
+		"lint:css": "wp-scripts lint-style",
+		"format:css": "wp-scripts lint-style --fix",
+		"lint:js": "wp-scripts lint-js",
 		"format:js": "wp-scripts lint-js --fix",
-		"format:css": "stylelint \"**/*.scss\" --fix",
-		"lint:css": "stylelint \"**/*.scss\" --max-warnings=0",
-		"lint:js": "wp-scripts lint-js --max-warnings=0",
 		"lint:php": "composer run lint",
-		"lint": "npm run lint:js && npm run lint:php && npm run lint:css",
-		"setup": "./setup.sh",
-		"reset": "rm -rf node_modules && rm -rf build && rm -rf vendor && npm run setup",
-		"size": "size-limit",
+		"format:php": "composer format",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
-		"prepare": "husky",
-		"wp-env": "wp-env"
+		"start": "wp-scripts start --experimental-modules --blocks-manifest"
 	},
-	"files": [
-		"[^.]*"
-	],
 	"devDependencies": {
-		"@size-limit/preset-small-lib": "^11.2.0",
-		"@wordpress/blocks": "^14.15.0",
-		"@wordpress/data": "^10.26.0",
-		"@wordpress/dom-ready": "^4.26.0",
-		"@wordpress/element": "^6.21.0",
-		"@wordpress/env": "^10.26.0",
-		"@wordpress/eslint-plugin": "^22.7.0",
-		"@wordpress/i18n": "^5.26.0",
-		"@wordpress/icons": "^10.26.0",
-		"@wordpress/interactivity": "^6.26.0",
-		"@wordpress/prettier-config": "^4.26.0",
-		"@wordpress/scripts": "^30.19.0",
-		"@wordpress/stylelint-config": "^23.18.0",
-		"concurrently": "^9.1.2",
-		"eslint-config-prettier": "10.1.5",
-		"husky": "^9.1.7",
-		"size-limit": "^11.2.0",
-		"stylelint": "^16.21.1",
-		"stylelint-scss": "^6.12.1",
-		"webpack": "^5.100.1",
-		"webpack-cli": "^6.0.1"
+        "@wordpress/blocks": "^15.4.0",
+		"@wordpress/data": "^10.31.0",
+		"@wordpress/dom-ready": "^4.31.0",
+		"@wordpress/element": "^6.31.0",
+		"@wordpress/env": "^10.31.0",
+        "@wordpress/i18n": "^6.4.0",
+		"@wordpress/icons": "^10.31.0",
+		"@wordpress/interactivity": "^6.31.0",
+		"@wordpress/scripts": "^30.24.0",
+		"npm-run-all": "^4.1.5"
 	}
 }

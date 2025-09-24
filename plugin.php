@@ -17,24 +17,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-// Define plugin constants.
-define( 'MULTI_BLOCK_STARTER_PATH', plugin_dir_path( __FILE__ ) );
-define( 'MULTI_BLOCK_STARTER_URL', plugin_dir_url( __FILE__ ) );
+// Include our bundled autoload if not loaded globally.
+if ( ! class_exists( Multi_Block_Starter\Plugin_Paths::class ) && file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+	require_once __DIR__ . '/vendor/autoload.php';
+}
 
-// Include Composer's autoload file.
-if ( file_exists( plugin_dir_path( __FILE__ ) . 'vendor/autoload.php' ) ) {
-	require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
-} else {
-	wp_trigger_error( ' Multi Block Starter Plugin: Composer autoload file not found. Please run `composer install` to install the dependencies.', E_USER_ERROR );
+if ( ! class_exists( Multi_Block_Starter\Plugin_Paths::class ) ) {
+	wp_trigger_error( 'Multi Block Starter Plugin: Composer autoload file not found. Please run `composer install`.', E_USER_ERROR );
 	return;
 }
-// Instantiate the classes.
-$multi_block_starter_classes = array(
-	\Multi_Block_Starter\Enqueues::class,
-	\Multi_Block_Starter\Plugin_Paths::class,
-	\Multi_Block_Starter\Register_Blocks::class,
+
+// Instantiate our modules.
+$multi_block_starter_modules = array(
+	new Multi_Block_Starter\Register_Blocks( __DIR__ . '/build' ),
+	new Multi_Block_Starter\Enqueues( __DIR__ . '/build' ),
 );
 
-foreach ( $multi_block_starter_classes as $multi_block_starter_class ) {
-	new $multi_block_starter_class();
+
+foreach ( $multi_block_starter_modules as $multi_block_starter_module ) {
+	if ( is_a( $multi_block_starter_module, Multi_Block_Starter\Plugin_Module::class ) ) {
+		$multi_block_starter_module->init();
+	}
 }

@@ -3,5 +3,9 @@ import { useBlockProps } from '@wordpress/block-editor';
 import './editor.scss';
 
 export default function Edit() {
-	return <p {...useBlockProps()}>{__('Static block in the editor', 'multi-block-starter')}</p>;
+	return (
+		<p { ...useBlockProps() }>
+			{ __( 'Static block in the editor', 'multi-block-starter' ) }
+		</p>
+	);
 }
