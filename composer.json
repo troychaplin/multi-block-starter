@@ -1,6 +1,6 @@
 {
-	"name": "troychaplin/veils-of-fate-plugin",
-	"description": "A plugin for the Veils of Fate WordPress RPG.",
+	"name": "troychaplin/multi-block-starter",
+	"description": "A starter configuration for creating a WordPress plugin with multiple blocks.",
 	"type": "wordpress-plugin",
 	"license": "GPL-2.0-or-later",
 	"autoload": {

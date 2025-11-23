@@ -2,10 +2,10 @@
 /**
  * Base class for plugin modules which can be initialized.
  *
- * @package Veils_Of_Fate_Plugin
+ * @package Multi_Block_Starter
  */
 
-namespace Veils_Of_Fate_Plugin;
+namespace Multi_Block_Starter;
 
 /**
  * Plugin module extended by other classes.

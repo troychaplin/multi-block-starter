@@ -2,17 +2,17 @@
 /**
  * Enqueue assets.
  *
- * @package Veils_Of_Fate_Plugin
+ * @package Multi_Block_Starter
  */
 
-namespace Veils_Of_Fate_Plugin;
+namespace Multi_Block_Starter;
 
 /**
  * Class Enqueues
  *
  * This class is responsible for enqueueing scripts and styles for the plugin.
  *
- * @package Veils_Of_Fate_Plugin
+ * @package Multi_Block_Starter
  */
 class Enqueues extends Plugin_Module {
 	/**

@@ -9,13 +9,13 @@ module.exports = [
 		...scriptConfig,
 		entry: {
 			...scriptConfig.entry(),
-			'veils-plugin-editor': path.resolve(
+			'multi-block-editor': path.resolve(
 				__dirname,
-				'src/veils-plugin-editor.js'
+				'src/multi-block-editor.js'
 			),
-			'veils-plugin-frontend': path.resolve(
+			'multi-block-frontend': path.resolve(
 				__dirname,
-				'src/veils-plugin-frontend.js'
+				'src/multi-block-frontend.js'
 			),
 		},
 	},
