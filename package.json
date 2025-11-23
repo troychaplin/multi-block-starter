@@ -1,7 +1,7 @@
 {
-	"name": "multi-block-starter",
+	"name": "veils-of-fate-plugin",
 	"version": "0.1.0",
-	"description": "A starter configuration for creating a WordPress plugin with multiple blocks.",
+	"description": "A plugin for the Veils of Fate WordPress RPG.",
 	"author": "Troy Chaplin",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",

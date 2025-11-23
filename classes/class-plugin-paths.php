@@ -2,17 +2,17 @@
 /**
  * Resolve paths and URLs relative to plugin directories.
  *
- * @package Multi_Block_Starter
+ * @package Veils_Of_Fate_Plugin
  */
 
-namespace Multi_Block_Starter;
+namespace Veils_Of_Fate_Plugin;
 
 /**
  * Class Plugin_Paths
  *
  * This class provides methods to handle and retrieve various paths related to the plugin.
  *
- * @package Multi_Block_Starter
+ * @package Veils_Of_Fate_Plugin
  */
 class Plugin_Paths {
 

@@ -2,15 +2,15 @@
 /**
  * Register our blocks.
  *
- * @package Multi_Block_Starter
+ * @package Veils_Of_Fate_Plugin
  */
 
-namespace Multi_Block_Starter;
+namespace Veils_Of_Fate_Plugin;
 
 /**
  * This class is responsible for registering custom Gutenberg blocks for the plugin.
  *
- * @package Multi_Block_Starter
+ * @package Veils_Of_Fate_Plugin
  */
 class Register_Blocks extends Plugin_Module {
 	/**

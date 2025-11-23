@@ -22,7 +22,7 @@
 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
 		<properties>
 			<property name="prefixes" type="array">
-				<element value="multi_block_starter"/>
+				<element value="veils_of_fate_plugin"/>
 			</property>
 		</properties>
 	</rule>
@@ -31,7 +31,7 @@
 	<rule ref="WordPress.WP.I18n">
 		<properties>
 			<property name="text_domain" type="array">
-				<element value="multi-block-starter"/>
+				<element value="veils-of-fate-plugin"/>
 			</property>
 		</properties>
 	</rule>
