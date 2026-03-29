@@ -15,15 +15,34 @@ jobs:
 
         steps:
             - name: Checkout
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
+
+            - name: Install pnpm
+              uses: pnpm/action-setup@v4
 
             - name: Setup Node.js
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
-                  node-version: '20.10.0'
+                  node-version-file: '.nvmrc'
+                  cache: 'pnpm'
 
-            - name: 📦 Install
-              run: npm install
+            - name: Install dependencies
+              run: pnpm install --frozen-lockfile
 
-            - name: 🔧 Build
-              run: npm run build
+            - name: Lint JS & CSS
+              run: pnpm run lint:js && pnpm run lint:css
+
+            - name: Build
+              run: pnpm run build
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: '8.2'
+                  tools: composer
+
+            - name: Install Composer dependencies
+              run: composer install --no-interaction
+
+            - name: Lint PHP
+              run: composer run lint

@@ -97,18 +97,18 @@ else
     print_warning "Node.js version mismatch. Expected v$NODE_VERSION, got $CURRENT_NODE_VERSION"
 fi
 
-# Check if npm is available
-if ! command_exists npm; then
-    print_error "npm is not available. Please install npm."
+# Check if pnpm is available
+if ! command_exists pnpm; then
+    print_error "pnpm is not available. Install it with: corepack enable && corepack prepare pnpm@latest --activate"
     exit 1
 fi
 
-# Install npm dependencies
-print_status "Installing npm dependencies..."
-if npm install; then
-    print_success "npm dependencies installed"
+# Install pnpm dependencies
+print_status "Installing pnpm dependencies..."
+if pnpm install; then
+    print_success "pnpm dependencies installed"
 else
-    print_error "Failed to install npm dependencies"
+    print_error "Failed to install pnpm dependencies"
     exit 1
 fi
 
@@ -132,6 +132,6 @@ echo ""
 print_success "Setup complete! 🎉"
 echo ""
 echo "Next steps:"
-echo "  • Run 'npm start' to start development"
-echo "  • Run 'npm run build' to build for production"
+echo "  • Run 'pnpm start' to start development"
+echo "  • Run 'pnpm run build' to build for production"
 echo "  • Check the README.md for more information" 

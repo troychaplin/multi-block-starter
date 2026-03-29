@@ -5,10 +5,14 @@
 	"author": "Troy Chaplin",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
+	"packageManager": "pnpm@9.15.4",
+	"engines": {
+		"node": ">=20.10.0"
+	},
 	"scripts": {
 		"build": "wp-scripts build --experimental-modules --blocks-manifest",
-		"lint": "npm-run-all lint:*",
-		"format": "npm-run-all format:*",
+		"lint": "pnpm run /^lint:/",
+		"format": "pnpm run /^format:/",
 		"lint:css": "wp-scripts lint-style",
 		"format:css": "wp-scripts lint-style --fix",
 		"lint:js": "wp-scripts lint-js",
@@ -20,15 +24,14 @@
 		"start": "wp-scripts start --experimental-modules --blocks-manifest"
 	},
 	"devDependencies": {
-        "@wordpress/blocks": "^15.4.0",
-		"@wordpress/data": "^10.31.0",
-		"@wordpress/dom-ready": "^4.31.0",
-		"@wordpress/element": "^6.31.0",
-		"@wordpress/env": "^10.31.0",
-        "@wordpress/i18n": "^6.4.0",
-		"@wordpress/icons": "^10.31.0",
-		"@wordpress/interactivity": "^6.31.0",
-		"@wordpress/scripts": "^30.24.0",
-		"npm-run-all": "^4.1.5"
+		"@wordpress/blocks": "^15.15.0",
+		"@wordpress/data": "^10.42.0",
+		"@wordpress/dom-ready": "^4.42.0",
+        "@wordpress/block-editor": "^15.15.0",
+		"@wordpress/element": "^6.42.0",
+		"@wordpress/i18n": "^6.15.0",
+		"@wordpress/icons": "^12.0.0",
+		"@wordpress/interactivity": "^6.42.0",
+		"@wordpress/scripts": "^31.7.0"
 	}
 }

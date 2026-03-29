@@ -1,7 +1,7 @@
 # Run the lint command
 echo ""
 echo "\033[0;31mRunning lint command...\033[0m"
-npm run lint || {
+pnpm run lint || {
   echo "\n\033[0;31m--------------------------------------------------------------------------------\033[0m"
   echo "\033[0;31mLinting failed. Commit aborted.\033[0m"
   echo "\033[0;31m--------------------------------------------------------------------------------\033[0m\n"

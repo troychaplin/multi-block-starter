@@ -3,6 +3,10 @@
 	"description": "A starter configuration for creating a WordPress plugin with multiple blocks.",
 	"type": "wordpress-plugin",
 	"license": "GPL-2.0-or-later",
+	"minimum-stability": "stable",
+	"require": {
+		"php": ">=7.0"
+	},
 	"autoload": {
 		"classmap": [
 			"classes/"
